@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modifier : {{ poste.title }}</title>
+  </head>
+  <style>
+    .container {
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">modifier</button>
+      </form>
+    </div>
+  </body>
+</html>

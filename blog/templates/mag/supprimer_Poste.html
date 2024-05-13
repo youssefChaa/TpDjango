@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Supprimer : {{ Poste.title }}</title>
+  </head>
+  <body>
+    <h1>Êtes-vous sûr de vouloir supprimer : {{Poste.title }} ?</h1>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Oui, supprimer</button>
+    </form>
+  </body>
+</html>
